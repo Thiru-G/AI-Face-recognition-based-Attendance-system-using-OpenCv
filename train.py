@@ -14,9 +14,6 @@ import tkinter.font as font
 import serial
 import time
 
-# Define the serial port and baud rate.
-# Ensure the 'COM#' corresponds to what was seen in the Windows Device Manager
-#ser = serial.Serial('COM6', 9600)
 window = tk.Tk()
 #helv36 = tk.Font(family='Helvetica', size=36, weight='bold')
 window.title("Face_Recogniser")
@@ -223,8 +220,7 @@ def TrackImages():
         attendance=attendance.drop_duplicates(subset=['Id'],keep='first')    
         cv2.imshow('im',im) 
         if (cv2.waitKey(1)==ord('q')):
-            #time.sleep(0.1)
-            #   ser.write(b'H')
+            
             break
 
 
